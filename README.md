@@ -16,16 +16,16 @@ Once both spikes work independently, next step is a single end-to-end vertical s
 
 ## Requirements
 
-- Xcode: 26.6
+- Xcode: [fill in version, e.g. 17.x]
 - macOS SDK: 26.0+
 - Apple Silicon (M-series) required for on-device AI via FoundationModels — Intel Macs use the metadata fallback path only (see REQUIREMENTS.md §3, §4.2)
 - Apple Intelligence enabled on the test device/simulator
 
 ## Project Structure
 
-- **Main App target**: `[fill in target name]` — SwiftUI app (NavigationSplitView, Settings, History)
-- **Finder Extension target**: `[fill in target name]` — AppKit-based Finder Action extension
-- **Shared App Group**: `[fill in App Group identifier, e.g. group.com.hkfletcher.dub]` — shares `UserPreferences.swift` and history data between the two targets via `UserDefaults`
+- **Main App target**: `Dub` — SwiftUI app (NavigationSplitView, Settings, History)
+- **Finder Extension target**: `DubFinderExtension` — Action Extension (surfaces as a Finder Quick Action; not a Finder Sync Extension)
+- **Shared App Group**: `group.kevonfletcher.dub` — shares `UserPreferences.swift` and history data between the two targets via `UserDefaults`
 
 > Both targets must be signed with the same App Group entitlement. If preferences/history aren't syncing between the app and extension during testing, check this first.
 
