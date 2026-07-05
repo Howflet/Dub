@@ -9,8 +9,8 @@ Full product spec: see [`REQUIREMENTS.md`](./REQUIREMENTS.md).
 🚧 **Pre-alpha / de-risking phase.** No user-facing app yet.
 
 Currently validating the two riskiest technical unknowns before building out full feature scope:
-- [ ] Minimal Finder Extension that can rename a file via `NSFileCoordinator` / `NSFilePresenter`
-- [ ] Minimal `FoundationModels` call on an image, with timeout handling
+- [X] Minimal Finder Extension that can rename a file via `NSFileCoordinator` / `NSFilePresenter`
+- [X] Minimal `FoundationModels` call on an image, with timeout handling
 
 Once both spikes work independently, next step is a single end-to-end vertical slice (one file, snake_case only, no preferences UI) before broadening to the rest of the PRD.
 
